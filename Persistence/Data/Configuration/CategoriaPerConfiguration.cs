@@ -12,7 +12,12 @@ namespace Persistence.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<CategoriaPer> builder)
         {
+            builder.ToTable("ModuloNOtificaciones");
 
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).HasColumnName("Id");
+
+            
         }
     }
 }

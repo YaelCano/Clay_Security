@@ -8,6 +8,11 @@ namespace Domain.Entities
 {
     public class Programacion : BaseEntity
     {
-
+        public int IdContratoFk {get; set;}
+        public int IdTurno {get; set;}
+        public int IdEmpleado {get; set;}
+        public ICollection<Contrato> contratos{get; set;}
+        public ICollection<Turnos> Turnos{get; set;}
+        public ICollection<Persona> Empleados{get; set;}
     }
 }

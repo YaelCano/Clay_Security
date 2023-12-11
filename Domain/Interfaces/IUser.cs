@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Domain.Entities;
 
-namespace Domain.Entities
-{
-    public class Cuidad : BaseEntity
+namespace Domain.Interfaces
+{ 
+    public interface IUser:IGeneric<User> 
     {
-        public string nombreCiu {get; set;}
+
     }
-}
+} 

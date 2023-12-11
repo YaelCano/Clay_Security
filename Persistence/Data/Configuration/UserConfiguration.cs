@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistence.Data.Configuration
 {
-    public class PersonaConfiguration : IEntityTypeConfiguration<Persona>
+    public class UserConfiguration : IEntityTypeConfiguration<User>
     {
-        public void Configure(EntityTypeBuilder<Persona> builder)
+        public void Configure(EntityTypeBuilder<User> builder)
         {
-            // builder.HasIndex(e => e.IdPerson).IsUnique();
+
         }
     }
 }

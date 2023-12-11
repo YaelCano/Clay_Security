@@ -8,6 +8,7 @@ namespace Domain.Entities
 {
     public class CategoriaPer : BaseEntity
     {
-
+        public string nombreCat {get; set;}
+        public ICollection<Persona> personas {get; set;}
     }
 }

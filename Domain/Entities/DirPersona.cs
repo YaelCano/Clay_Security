@@ -8,6 +8,8 @@ namespace Domain.Entities
 {
     public class DirPersona : BaseEntity
     {
-
+        public string direccion {get; set;}
+        public int IdTDireccionFk {get; set;}
+        
     }
 }

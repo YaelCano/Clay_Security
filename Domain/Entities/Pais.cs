@@ -9,5 +9,6 @@ namespace Domain.Entities
     public class Pais : BaseEntity
     {
         public string nombrePais {get; set; }
+        public ICollection<Departamento> departamentos {get; set;}
     }
 }

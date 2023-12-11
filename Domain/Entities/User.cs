@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public class Estado : BaseEntity
+    public class User : BaseEntity
     {
-        public string descripcion {get; set;}
-        public ICollection<Contrato> contratos {get; set;}
+
     }
 }

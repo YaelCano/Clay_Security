@@ -8,6 +8,10 @@ namespace Domain.Entities
 {
     public class Turnos : BaseEntity
     {
-
+        public string nombreTurno { get; set; }
+        public TimeOnly horaTurnoI {get; set;}
+        public TimeOnly horaTurnoF {get; set;}
+        
+        public ICollection<Programacion> programacions {get; set;}
     }
 }
