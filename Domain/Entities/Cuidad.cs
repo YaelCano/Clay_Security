@@ -9,5 +9,8 @@ namespace Domain.Entities
     public class Cuidad : BaseEntity
     {
         public string nombreCiu {get; set;}
+        public int IdDepartamentoFk {get; set;}
+        public Departamento Departamento {get; set;}
+        public ICollection<Persona> Personas{get; set;}
     }
 }

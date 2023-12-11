@@ -8,7 +8,7 @@ namespace Domain.Entities
 {
     public class TipoDireccion : BaseEntity
     {
-        public string descripcion {get; set;}
-        public ICollection<DirPersona> dirPersonas {get; set;}
+        public string Descripcion {get; set;}
+        public ICollection<DirPersona> DirPersonas {get; set;}
     }
 }

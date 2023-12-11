@@ -8,13 +8,21 @@ namespace Domain.Entities
 {
     public class Persona : BaseEntity
     {
-        public string nombre {get; set;}
-        public DateOnly dateReg {get; set;}
-        public int IdCategoria {get; set;}
-        public int IdCuidad {get; set;}
-        public int IdTPersona {get; set;}
-        public ICollection<CategoriaPer> categorias {get; set;}
+        public string Nombre {get; set;}
+        public DateOnly FechaRegistro {get; set;}
+        public int IdCategoriaFk {get; set;}
+        public int IdCuidadFk {get; set;}
+        public int IdTPersonaFk {get; set;}
+        public DirPersona DirPersona {get; set;}
+        public ICollection<Contrato> Contratos {get; set;}
+
         public ICollection<ContactoPer> contacto {get; set;}
-        public ICollection<TipoPersona> tipoPersonas {get; set;}
+        public ICollection<DirPersona> DirPersonas {get; set;}
+        public ICollection<Programacion> Programacions {get; set;}
+        public Cuidad Cuidad {get; set;}
+        public CategoriaPer Categoria {get; set;}
+        public TipoPersona TipoPersona {get; set;}
+
+    
     }
 }

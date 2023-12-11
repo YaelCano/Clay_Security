@@ -8,8 +8,9 @@ namespace Domain.Entities
 {
     public class Departamento : BaseEntity
     {
-        public string nombreDep {get; set;}
+        public string NombreDep {get; set;}
         public int IdpaisFk {get; set;}
-        ICollection<Cuidad> ciudads  {get; set;}
+        public Pais Pais {get; set;}
+        public ICollection<Cuidad> Cuidads  {get; set;}
     }
 }

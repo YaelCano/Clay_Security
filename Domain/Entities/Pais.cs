@@ -8,7 +8,7 @@ namespace Domain.Entities
 {
     public class Pais : BaseEntity
     {
-        public string nombrePais {get; set; }
-        public ICollection<Departamento> departamentos {get; set;}
+        public string NombrePais {get; set; }
+        public ICollection<Departamento> Departamentos {get; set;}
     }
 }

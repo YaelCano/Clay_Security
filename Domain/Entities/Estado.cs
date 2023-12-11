@@ -8,7 +8,7 @@ namespace Domain.Entities
 {
     public class Estado : BaseEntity
     {
-        public string descripcion {get; set;}
-        public ICollection<Contrato> contratos {get; set;}
+        public string Descripcion {get; set;}
+        public ICollection<Contrato> Contratos {get; set;}
     }
 }

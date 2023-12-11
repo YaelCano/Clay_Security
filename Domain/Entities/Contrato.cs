@@ -13,7 +13,9 @@ namespace Domain.Entities
         public int IdEstadoFk {get; set;}
         public DateOnly fechaContrato {get; set;}
         public DateOnly fechaFin {get; set;}
-
-        public ICollection<Programacion>programacions {get; set;}
+        public Persona Empleado {get; set;}
+        public Persona Cliente {get; set;}
+        public Estado Estado {get; set;}
+        public ICollection<Programacion>Programacions {get; set;}
     }
 }

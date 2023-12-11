@@ -8,7 +8,10 @@ namespace Domain.Entities
 {
     public class ContactoPer : BaseEntity
     {
-        public int IdTPersona {get; set;}
+        public string descripcion {get; set;}
+        public int IdTPersonaFk {get; set;}
         public int IdTContactoFK {get; set;}
+        public Persona Persona {get; set;}
+        public TipoContacto TipoContacto {get; set;}
     }
 }
