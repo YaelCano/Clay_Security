@@ -25,7 +25,7 @@ public class UserController: BaseController
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<IEnumerable<User>>> Get()
         {
-            var entidades = await _unitOfWork.Users.GetAllAsync();
+            var entidades = await _unitOfWork.User.GetAllAsync();
             return _mapper.Map<List<User>>(entidades);
         }
 
@@ -35,7 +35,7 @@ public class UserController: BaseController
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<UserDto>> Get(int id)
         {
-            var entidad = await _unitOfWork.Users.GetByIdAsync(id);
+            var entidad = await _unitOfWork.User.GetByIdAsync(id);
             if(entidad == null)
             {
                 return NotFound();
@@ -49,7 +49,7 @@ public class UserController: BaseController
         public async Task<ActionResult<User>> Post(UserDto UserDto)
         {
             var entidad = _mapper.Map<User>(UserDto);
-            this._unitOfWork.Users.Add(entidad);
+            this._unitOfWork.User.Add(entidad);
             await _unitOfWork.SaveAsync();
             if(entidad == null)
             {
@@ -70,7 +70,7 @@ public class UserController: BaseController
                 return NotFound();
             }
             var entidades = _mapper.Map<User>(UserDto);
-            _unitOfWork.Users.Update(entidades);
+            _unitOfWork.User.Update(entidades);
             await _unitOfWork.SaveAsync();
             return UserDto;
         }
@@ -80,12 +80,12 @@ public class UserController: BaseController
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Delete(int id)
         {
-            var entidad = await _unitOfWork.Users.GetByIdAsync(id);
+            var entidad = await _unitOfWork.User.GetByIdAsync(id);
             if(entidad == null)
             {
                 return NotFound();
             }
-            _unitOfWork.Users.Delete(entidad);
+            _unitOfWork.User.Delete(entidad);
             await _unitOfWork.SaveAsync();
             return NoContent();
         }

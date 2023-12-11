@@ -25,7 +25,7 @@ namespace Persistence.Data.Configuration
             .WithMany(O => O.Cuidads)
             .HasForeignKey(d => d.IdDepartamentoFk)
             .OnDelete(DeleteBehavior.ClientSetNull)
-            .HasConstraintName("Fk_Ciudad_Departamento")
+            .HasConstraintName("Fk_Ciudad_Departamento");
         }
     }
 }
