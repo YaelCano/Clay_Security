@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 namespace API.Dtos; 
     public class ProgramacionDto : BaseDto
     { 
-
+        
     } 
