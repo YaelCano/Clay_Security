@@ -12,7 +12,13 @@ namespace Persistence.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<TipoDireccion> builder)
         {
+            builder.ToTable("TipoDireccion");
+            builder.HasKey(i => i.Id).HasName("Id");
 
+            builder.Property(a => a.Descripcion)
+                .HasColumnName("descripcion")
+                .HasMaxLength(50)
+                .IsUnicode(false);
         }
     }
 }

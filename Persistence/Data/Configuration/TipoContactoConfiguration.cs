@@ -12,7 +12,13 @@ namespace Persistence.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<TipoContacto> builder)
         {
+            builder.ToTable("TipoContacto");
+            builder.HasKey(e => e.Id).HasName("Id");
 
+            builder.Property(e => e.descripcion)
+                .HasColumnName("descripcion")
+                .HasMaxLength(60)
+                .IsUnicode(false);
         }
     }
 }

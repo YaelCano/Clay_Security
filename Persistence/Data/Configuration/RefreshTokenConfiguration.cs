@@ -8,14 +8,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistence.Data.Configuration
 {
-    public class ProgramacionConfiguration : IEntityTypeConfiguration<Programacion>
+    public class RefreshTokenConfiguration :IEntityTypeConfiguration<RefreshToken>
     {
-        public void Configure(EntityTypeBuilder<Programacion> builder)
+        public void Configure(EntityTypeBuilder<RefreshToken> builder)
         {
-            builder.ToTable("programacion");
-            builder.HasKey(e => e.Id).HasName("Id");
-
-            
+            builder.ToTable("RefreshToken");
         }
     }
 }

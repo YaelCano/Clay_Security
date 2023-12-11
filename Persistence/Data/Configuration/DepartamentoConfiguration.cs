@@ -12,7 +12,7 @@ namespace Persistence.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Departamento> builder)
         {
-
+            builder.ToTable("Departamento");
         }
     }
 }

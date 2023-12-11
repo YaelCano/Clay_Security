@@ -12,7 +12,12 @@ namespace Persistence.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Estado> builder)
         {
-
+            builder.ToTable("Estado");
+            builder.Property(e => e.Descripcion)
+                .IsRequired()
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Descripcion");
         }
     }
 }
